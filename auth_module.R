@@ -7,8 +7,8 @@ loginUI <- function(id) {
 
 login <- function(input, output, session, user_base, log_out) {
   
-  credentials <- reactiveValues(user_auth = FALSE,
-                                permission = NULL)
+  credentials <- reactiveValues(user_auth = USER_AUTH, 
+                                permission = PERMISSION)
   
   observe({
     if(log_out() > 0) {
